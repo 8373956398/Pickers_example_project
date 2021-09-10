@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pickers.MainPage"
+             BackgroundColor="Gray" >
+
+    <StackLayout Padding="20">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Pickers" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <DatePicker x:Name="dp" MaximumDate="2021/09/11" MinimumDate="1999/09/11" />
+        <TimePicker x:Name="tp"/>
+        <Picker x:Name="picker" Title="select name">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Praveen Singh</x:String>
+                    <x:String>Abhinav Singh</x:String>
+                    <x:String>Ashwini Singh</x:String>
+                    <x:String>Neelam lingwal</x:String>
+                    <x:String>Kiran lingwal</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button x:Name="btn" Text="Print Selections" Clicked="onClick"/>
+        <Label x:Name="result" />
+    </StackLayout>
+
+</ContentPage>
